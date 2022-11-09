@@ -1,0 +1,248 @@
+#nav{
+    display: flex;
+    width: 99%;
+    justify-content:space-between;
+    align-items: center;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+#nav>div>img{
+    width: 7%;
+    /* height: 3%; */
+}
+#nav>div{
+    display: flex;
+    justify-content: flex-end;
+}
+#nav>h3>span>img{
+    width: 5%;
+}
+#nav>h3{
+    color: white;
+}
+#navselect{
+    color: white;
+    background-color: black;
+    height: 15px;
+    margin-top:20px;
+    border: none;
+    margin-left: 10px; 
+    
+}
+.menu{
+    margin-top: 10px;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-left: 10px;
+  }
+#top>img{
+    width: 100%;
+    height: 500px;
+    opacity: 0.8;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .centered>h1{
+    color: white;
+  }
+  .search{
+    height: 60px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+  }
+  input{
+    height: 40px;
+    width: 20%;
+  }
+  #Guest{
+    height: 40px;
+    width: 20%;
+  }
+  form{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+  #Search{
+    color: white;
+    background-color: blue;
+    border: none;
+  }
+  #type{
+    width: 30%;
+   
+  }
+ #container{
+    margin-top: 20px;
+    display: flex;
+    gap: 100px;
+    overflow: hidden;
+ }
+ #slides{
+    display: flex;
+    position: relative;
+ }
+#slides>i{
+    color: gray;
+    cursor: pointer;
+    transform: translateY(+30%);
+    font-size: 30px;
+}
+#slides>i:first-child{
+    left:-23px;
+}
+#slides>i:first-child{
+    right:-23px;
+}
+.com>img{
+    width: 40%;
+    margin: auto;
+}
+#communities>span{
+    width: 100%;
+    text-align: center;
+}
+#communities{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+#mid{
+    display: flex;
+    justify-content: space-evenly;
+}
+#mid>div:nth-child(1){
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 30%;
+    padding: 30px;
+}
+#mid>div>h1{
+    text-align: center;
+}
+#mid>div:nth-child(2){
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    grid-auto-rows:150px;
+}
+#mid>div:nth-child(2)>span>img{
+    width: 100%;
+    opacity: 0.8;
+   cursor: pointer;
+}
+#mid>div:nth-child(2)>span>h3{
+    position:relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+#mid2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+#mid2>div{
+    width: 42%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+.content{
+    display: flex;
+    text-align: center;
+}
+.content>span>img{
+    width: 20%;
+}
+.button{
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.87);
+    color: white;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+#mid3{
+    margin-top: 20px;
+    display: flex;
+    gap: 100px;
+    overflow: hidden;
+   height: 150px;
+}
+#slides2{
+    display: flex;
+    position: relative;
+ }
+#slides2>i{
+    color: gray;
+    cursor: pointer;
+    transform: translateY(+30%);
+    font-size: 30px;
+}
+#slides2>i:first-child{
+    left:-23px;
+}
+#slides2>i:first-child{
+    right:-23px;
+}
+table{
+    width: 70%;
+}
+#bottom{
+    margin-left: 20px;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+}
+#menu1{
+    position: absolute;
+    width: 25%;
+    background-color: black;
+    display: none;
+    /* padding: 10px; */
+}
+#menu1>p{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.827);
+}
+.line{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.781);
+    width: 90%;
+    margin: auto;
+}
+#menu1>p:hover{
+    color: white;
+    cursor: pointer;
+}
+#menu1>h5{
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#menu1>h5:hover{
+    cursor: pointer;
+}
+.dropdown:hover{
+    cursor: pointer;
+}
