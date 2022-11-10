@@ -8,8 +8,10 @@
     padding-right: 10px;
     margin: auto;
 }
-#nav>div>img{
-    width: 7%;
+#nav>div>i{
+    margin-right:15px;
+    margin-top: 10px;
+    cursor: pointer;
     /* height: 3%; */
 }
 #nav>div{
@@ -18,6 +20,7 @@
 }
 #nav>h3>span>img{
     width: 5%;
+    cursor: pointer;
 }
 #nav>h3{
     color: white;
@@ -29,6 +32,8 @@
     margin-top:20px;
     border: none;
     margin-left: 10px; 
+    margin-right: 15px;
+    cursor: pointer;
     
 }
 .menu{
@@ -49,9 +54,10 @@
 }
 .centered {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 60%;
   }
   .centered>h1{
     color: white;
@@ -115,7 +121,7 @@
     margin: auto;
 }
 #communities>span{
-    width: 100%;
+    width: 70%;
     text-align: center;
 }
 #communities{
@@ -129,10 +135,10 @@
 }
 #mid>div:nth-child(1){
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    width: 30%;
+    width: 25%;
     padding: 30px;
 }
-#mid>div>h1{
+#mid>div>h2{
     text-align: center;
 }
 #mid>div:nth-child(2){
@@ -216,14 +222,27 @@ table{
 }
 #menu1{
     position: absolute;
-    width: 25%;
+    top: -100%;
+    left:95%;
+    width: 37%;
     background-color: black;
     display: none;
-    /* padding: 10px; */
 }
 #menu1>p{
     text-align: center;
     color: rgba(255, 255, 255, 0.827);
+}
+.link{
+    text-align: center;
+}
+.link>a{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.827);
+    text-decoration: none;
+}
+.link>a:hover{
+    color: white;
+    cursor: pointer;
 }
 .line{
     border-bottom: 1px solid rgba(255, 255, 255, 0.781);
@@ -233,6 +252,7 @@ table{
 #menu1>p:hover{
     color: white;
     cursor: pointer;
+    
 }
 #menu1>h5{
     color: white;
@@ -243,6 +263,212 @@ table{
 #menu1>h5:hover{
     cursor: pointer;
 }
-.dropdown:hover{
+.menu{
     cursor: pointer;
+}
+#signin{
+    position: absolute;
+    top: -70%;
+    left:99%;
+    width: 20%;
+    height: 70px;
+    background-color:white;
+    padding: 20px;
+    display: none;
+}
+#signin>a{
+ padding-left: 15px;
+ color: gray;
+ text-decoration: none;
+}
+#signin>a:hover{
+    cursor: pointer;
+    color:black;
+}
+/* For Sign in page */
+#page_sign{
+    position: absolute;
+    top: -70%;
+    left:30%;
+    background-color:white;
+    width: 60%;
+    margin: auto;
+    height: auto;
+    padding: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: none;
+}
+#page_sign>div:nth-child(1){
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+#page_sign>div:nth-child(1)>p{
+    color: blue;
+    text-decoration: none;
+}
+#page_sign>div:nth-child(1)>p:hover{
+   cursor: pointer;
+}
+.break{
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.num{
+    padding: 10px;
+    width: 15%;
+}
+
+.mobile{
+    width: 65%;
+}
+#page_sign>div:nth-child(3){
+    width: 95%;
+    margin: auto;
+}
+#page_sign>div:nth-child(3)>form{
+    width: 100%;
+    margin-left:5%;
+    margin-bottom: 30px;
+}
+/* End */
+/* Sign Up */
+#page_signup{
+    position: fixed;
+    background-color: white;
+    top: -75%;
+    left: 30%;
+    width: 70%;
+    margin: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: none;
+}
+#page_signup>div:nth-child(1){
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+#page_signup>div:nth-child(1)>p{
+    color: blue;
+    text-decoration: none;
+}
+#page_signup>div:nth-child(1)>p:hover{
+   cursor: pointer;
+}
+.break{
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+#page_signup>div:nth-child(3){
+    width: 95%;
+    margin: auto;
+}
+#page_signup>div:nth-child(3)>form{
+    width: 100%;
+    margin-left:5%;
+    margin-bottom: 30px;
+}
+.verify{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+.verify>p{
+  padding: 10px;
+  background-color: white;
+  border:1px solid gray;
+}
+.verify>p:hover{
+  border:1px solid black;
+  cursor: pointer;
+}
+.verify>input{
+  padding: 10px;
+  background-color:blue;
+  color: white;
+  border:1px solid gray;
+  border: none;
+  width: 40%;
+}
+.verify>input:hover{
+    background-color: rgba(0, 0, 255, 0.753);
+    cursor: pointer;
+}
+#mail,#pass{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+#form{
+    width: 85%;
+    margin: auto;
+}
+#first_name,#last_name{
+    width: 39%;
+    margin-left: 10px;
+}
+#mobile1{
+    width: 70%;
+    margin-bottom: 15px;
+    padding: 0%;
+   
+}
+.num1{
+    margin-left: 10px;
+    padding: 10px;
+    width: 15%;
+    margin-bottom: 15px;
+}
+
+/* End */
+#forms{
+    display: block;
+}
+#Otp{
+    position: fixed;
+    top: -70%;
+    left:30%;
+    background-color:white;
+    width: 60%;
+    margin: auto;
+    height: auto;
+    padding: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: none;
+}
+#Otp>div:nth-child(1){
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+#OTP{
+    width: 90%;
+}
+.navOtp{
+    color: blue;
+}
+.navOtp:hover{
+    cursor:pointer ;
 }
