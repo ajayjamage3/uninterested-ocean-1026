@@ -50,7 +50,7 @@
 #top>img{
     width: 100%;
     height: 500px;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .centered {
     position: absolute;
@@ -150,7 +150,7 @@
 }
 #mid>div:nth-child(2)>span>img{
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.6;
    cursor: pointer;
 }
 #mid>div:nth-child(2)>span>h3{
@@ -227,6 +227,7 @@ table{
     width: 37%;
     background-color: black;
     display: none;
+    padding-bottom: 40px;
 }
 #menu1>p{
     text-align: center;
@@ -471,4 +472,33 @@ table{
 }
 .navOtp:hover{
     cursor:pointer ;
+}
+#signout{
+    position: absolute;
+    top: -70%;
+    left:99%;
+    width: 20%;
+    height: 70px;
+    background-color:white;
+    padding: 20px;
+    display: none;
+}
+#signout>a{
+ padding-left: 15px;
+ color: gray;
+ text-decoration: none;
+}
+#signout>a:hover{
+    cursor: pointer;
+    color:black;
+}
+#user{
+    cursor: pointer;
+}
+#dashboard{
+    cursor: pointer;
+}
+#padding{
+    width: 90%;
+    margin: auto;
 }

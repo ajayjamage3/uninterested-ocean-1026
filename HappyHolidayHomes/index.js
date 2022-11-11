@@ -16,9 +16,9 @@ function display(data){
         country.style.width = "250px"
         country.style.height = "150px"
         country.style.cursor = "pointer"
-        country.style.opacity = "0.8"
+        country.style.opacity = "0.6"
         country.addEventListener("click",function(){
-            window.location.href = "#"
+            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Image_click.html?#"
         })
         let name = document.createElement("h5")
         name.innerText = ele.name
@@ -65,20 +65,20 @@ function display2(data){
         country.style.width = "250px"
         country.style.height = "150px"
         country.style.cursor = "pointer"
-        country.style.opacity = "0.8"
+        country.style.opacity = "0.6"
         country.addEventListener("click",function(){
-            window.location.href = "#"
+            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/image_click2.html"
         })
         let name = document.createElement("h5")
         name.innerText = ele.name
         name.style.position = "relative"
-        name.style.top = "-50%"
+        name.style.top = "-70%"
         name.style.left = "50%"
         name.style.transform= "translate(-50%, -50%)"
         name.style.color = "white"
         name.style.textAlign = "center"
         name.style.fontSize = "20px"
-        name.style.opacity = "0.8"
+        country.style.opacity = "0.6"
         div.append(country,name)
         document.querySelector("#mid3").append(div)
     });
@@ -112,7 +112,7 @@ function showData(data){
     });
 }
 document.querySelector(".midsec").addEventListener("click",function(){
-    window.location.href = "#"
+    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Image_click.html?#"
 })
 document.querySelector(".menu").addEventListener("click",function(){
     document.querySelector("#menu1").style.display = "block"
@@ -241,3 +241,9 @@ function check_otp(First_name,Last_name){
     })
 }
 
+document.querySelector("#user").addEventListener("click",function(){
+    document.querySelector("#signout").style.display = "block"
+})
+document.querySelector("#dashboard").addEventListener("click",function(){
+    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html"
+})
