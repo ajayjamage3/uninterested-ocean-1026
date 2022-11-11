@@ -1,0 +1,105 @@
+#nav{
+    display: flex;
+    width: 99%;
+    justify-content:space-between;
+    align-items: center;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+#nav>div>i{
+    margin-right:15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#nav>div{
+    display: flex;
+    justify-content: flex-end;
+}
+#nav>h3>span>img{
+    width: 5%;
+    cursor: pointer;
+}
+#nav>h3{
+    color: white;
+}
+#navselect{
+    color: white;
+    background-color: black;
+    height: 15px;
+    margin-top:20px;
+    border: none;
+    margin-left: 10px; 
+    margin-right: 15px;
+    cursor: pointer;
+    
+}
+.menu{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-left: 10px;
+  }
+  #dashboard{
+    cursor: pointer;
+  }
+  #top{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+    margin-top: 20px;
+  }
+  .search{
+    width: 100%;
+    margin: auto;
+  }
+  .search>form>input{
+    padding: 10px;
+    width: 15%;
+  }
+  .search>form>select{
+    padding: 10px;
+    width: 20%;
+  }
+#grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: auto;
+    text-align:left;
+}
+#container{
+    margin-top: 20px;
+    display: flex;
+    gap: 100px;
+    overflow: hidden;
+}
+#slides{
+    display: flex;
+    position: relative;
+ }
+#slides>i{
+    color: gray;
+    cursor: pointer;
+    transform: translateY(+30%);
+    font-size: 30px;
+}
+#slides>i:first-child{
+    left:-23px;
+}
+#slides>i:first-child{
+    right:-23px;
+}
+#body{
+    width: 90%;
+    margin: auto;
+}

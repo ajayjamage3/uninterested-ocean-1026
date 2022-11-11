@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyHolidayHomes</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #nav {
+            display: flex;
+            width: 99%;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: auto;
+        }
+
+        #nav>div>i {
+            margin-right: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            /* height: 3%; */
+        }
+
+        #nav>div {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #nav>h3>span>img {
+            width: 5%;
+            cursor: pointer;
+        }
+
+        #nav>h3 {
+            color: white;
+        }
+
+        #navselect {
+            color: white;
+            background-color: black;
+            height: 15px;
+            margin-top: 20px;
+            border: none;
+            margin-left: 10px;
+            margin-right: 15px;
+            cursor: pointer;
+
+        }
+
+        .menu {
+            margin-top: 10px;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+            margin-left: 10px;
+        }
+
+        #top {
+            width: 90%;
+            margin: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #child1 {
+            width: 69%;
+            border-right: 1px solid gray;
+        }
+
+        #child2 {
+            width: 29%;
+            position: fixed;
+            left: 70%;
+            top:10%;
+        }
+
+        #sub {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #subchild1 {
+            display: flex;
+            margin-top: 0px;
+            width: 60%;
+        }
+
+        #subchild1>div>img {
+            width: 100%;
+        }
+        #subchild2{
+            position:absolute;
+            left:43%;
+            top:20%;
+        }
+        #subchild2>button{
+            color: blue;
+            border: 1px solid blue;
+            background-color: white;
+            padding: 5px;
+        }
+        #buttons>button{
+            background-color: white;
+            padding: 5px;
+        }
+        #Book_home{
+            width:95%;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #form{
+           width: 100%;
+           margin: auto;
+        }
+        #name,#num,#Date,#submit{
+            width: 80%;
+        }
+        input:required:focus {
+            border: 1px solid red;
+            outline: none;
+        }
+        #submit{
+            color: white;
+            background-color: blue;
+            border: none;
+        }
+        #enter{
+            width: 100%;
+            background-color:blue;
+            color: white;
+            border: none;
+        }
+        #otp{
+            position: fixed;
+            left: 70%;
+            top:25%;
+            width: 25%;
+            background-color:white;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <h3 id="dashboard"><span><img src="HHH.png" alt=""></span> HappyHolidayHomes</h3>
+        <div>
+            <i class="fa fa-user" style="font-size:24px;color:white;" id="person"></i>
+            <p id="user" style="color:white"></p>
+            <select id="navselect">
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+                <option value="ABC">ABC</option>
+            </select>
+            <div class="dropdown">
+                <div class="menu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="top">
+        
+        <div id="child1">
+           
+            <p><a href="http://127.0.0.1:5500/HappyHolidayHomes/index.html" style="text-decoration:none;color:black">Home</a>/
+                India /
+                Karnataka /
+                Coorg /
+                Property #47490620</p>
+            <div style="border-top:1px solid grey;">
+                <div> <img
+                        src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/47490620/20140207_091814_watermarked_image_1024.jpeg"
+                        alt="" width="60%" height="300px" style="margin-top:40px;"></div>
+            </div>
+            <div id="sub">
+                <div id="subchild1">
+                    <div><img
+                            src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/47490620/20140207_091727_watermarked_image_1024.jpeg"
+                            alt=""></div>
+                    <div><img
+                            src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/47490620/20140207_091713_watermarked_image_1024.jpeg"
+                            alt=""></div>
+                </div>
+                <div id="subchild2">
+                    <h2>The Misty Guest House In Coorg</h2>
+                    <p>Coorg, Karnataka, India | Karadigoud Road</p>
+                    <div style="border-top:1px solid grey;margin-bottom:20px;"></div>
+                    <button>HOMESTAY</button>
+                    <button>2 BEDROOMs</button>
+                    <button>2 BATHROOMS</button> <br> <br>
+                    <button>8 MAX GUESTS</button>
+                </div>
+            </div>
+           
+                <div style="display:flex;justify-content:space-evenly;width:60%">
+                    <p>OVERVIEW</p>
+                    <p>AMENITIES</p>
+                    <p> MAP</p>
+                    <p> POLICIES & FEES</p>
+                </div>
+                <div style="border-top:1px solid grey;margin-bottom:30px;"> </div>
+                <div style="width:100%;margin:auto;display: flex;justify-content:space-between;">
+                    <div style="width:70%">
+                        <div style="width:80%;text-align: center;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding: 20px;"><h1>Homestay</h1><p>Type Of Property</p></div>
+                        <div style="display:flex;justify-content:space-evenly;width:80%;margin-top: 20px;margin-bottom: 20px;">
+                            <div style="text-align:center;;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding:5px 15px;"><h1>2</h1><p>BEDROOMS</p></div>
+                            <div style="text-align:center;;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding:5px 15px;"><h1>2</h1>BATHROOMS</div>
+                        </div>
+                        <div style="display:flex;justify-content:space-evenly;width:80%;margin-top: 20px;margin-bottom: 20px;">
+                            <div style="text-align:center;;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding:5px 15px;"><h1>8</h1><p>MAX GUESTS</p></div>
+    
+                        </div>
+                    </div>
+                    <div style="width:100%;">
+                       <p>Coorg can be explicitly compared to the Goddess, completely clad in green drapery. Her crown are the beautiful hills, the tresses are the sacred rivers, her eyes serene and peace loving and her smile which welcomes everyone with warmth and dignity. To live in coorg is like cuddling in mother natures bossom. This feeling should be experienced. This cottage surrounded by coffee and pepper plantation with plenty of greenary is located in Siddapur near karadigod village and nearby flows the river Kaveri. The misty morning and the evening sunset
+                        are a breath taking sight.
+                        The cottage has two king sized bedrooms,attached bath and dressing rooms,an open veranda and a very spacious frontyard with</p>
+                </div>
+                </div>
+        <h1>Key Amenities</h1>
+        <div style="border-top:1px solid grey;margin-bottom:30px;"> </div>
+        <div id="buttons">
+            <button>POWER BACKUP</button>
+            <button>TELEVISION</button>
+            <button>LINEN PROVIDED</button>
+            <button>HOT WATER</button>
+            <button>SHOWER</button>
+            <button>SPARE MATRESSES</button>
+            <button>WESTERN TOILET</button> <br> <br>
+            <button>24/7 POWER</button>
+            <button>TREKKING NEARBY</button>
+            <button>BUS STOP CLOSE BY</button>
+            <button>BOOKS & MAGAZINES</button>
+            <button>SATELLITE/CABLE CONNECTION</button>
+        </div>
+        <h1>MAP</h1>
+        <div id="map" style="width:100%;height:350px;background:grey"></div>
+        <script>
+        function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.12),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+        
+    </div>
+    <div id="child2">
+        <div id="form" >
+            <form action="" id="payment" style="display:block;">
+                <label for="">Enter your name as per card </label> <br>
+                <input type="text" id="name" required> <br> <br>
+               
+                <label for="">Enter your card Number </label>  <br>
+                <input type="text" id="num" maxlength="16" minlength="16" required> <br> <br>
+    
+                <label for="">Enter CVV </label>  <br>
+                <input type="text" id="cvv" maxlength="3" minlength="3" required> <br> <br>
+    
+                <label for="">Enter Expiry date </label> <br> 
+                <input type="date" id="Date" required> <br> <br>
+        
+                <input type="submit" value="make a payment"id="submit">
+            </form>
+        </div>
+    </div>
+    <div>
+        <div id="otp">
+            <h1>Enter OTP</h1>
+            <form action="" class="OTP" style="display:block">
+                <input type="number" id="num1"> 
+                <input type="number" id="num2">
+                <input type="number" id="num3">
+                <input type="number" id="num4"> <br> <br>
+                <input type="submit"value="Enter" id="enter">
+            </form>
+            
+        </div>
+    </div>
+</div>
+   
+
+</body>
+
+</html>
+<script>
+      document.querySelector("#dashboard").addEventListener("click",function(){
+    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
+   })
+   document.querySelector("#payment").addEventListener("submit",function(){
+    event.preventDefault()
+        document.querySelector("#child2").style.display = "none"
+        document.querySelector("#otp").style.display = "block"
+   })
+   document.querySelector("#otp").addEventListener("submit",function(){
+    event.preventDefault()
+    let num1 = document.querySelector("#num1").value
+        let num2 = document.querySelector("#num2").value
+        let num3 = document.querySelector("#num3").value
+        let num4 = document.querySelector("#num4").value
+        let otp = num1+num2+num3+num4
+        if(otp == "1234"){
+            
+            alert("Payment Succesfull")
+            document.querySelector("#otp").style.display = "none"
+        }
+        else{
+            alert("Wrong OTP try again")
+            document.querySelector("#num1").innerHTML = ""
+            document.querySelector("#num2").innerHTML = ""
+            document.querySelector("#num3").innerHTML = ""
+            document.querySelector("#num4").innerHTML = ""
+        }
+   })
+  
+</script>
