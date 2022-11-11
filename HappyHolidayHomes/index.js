@@ -111,7 +111,7 @@ function showData(data){
         document.querySelector("#bottom").append(div)
     });
 }
-document.querySelector(".mid-sec").addEventListener("click",function(){
+document.querySelector(".midsec").addEventListener("click",function(){
     window.location.href = "#"
 })
 document.querySelector(".menu").addEventListener("click",function(){
