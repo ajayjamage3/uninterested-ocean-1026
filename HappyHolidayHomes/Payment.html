@@ -330,10 +330,10 @@
    })
    document.querySelector("#otp").addEventListener("submit",function(){
     event.preventDefault()
-    let num1 = document.querySelector("#num1").value
-        let num2 = document.querySelector("#num2").value
-        let num3 = document.querySelector("#num3").value
-        let num4 = document.querySelector("#num4").value
+        let num1 = document.querySelector("#num1").value = ""
+        let num2 = document.querySelector("#num2").value = ""
+        let num3 = document.querySelector("#num3").value = ""
+        let num4 = document.querySelector("#num4").value = ""
         let otp = num1+num2+num3+num4
         if(otp == "1234"){
             
@@ -342,10 +342,10 @@
         }
         else{
             alert("Wrong OTP try again")
-            document.querySelector("#num1").innerHTML = ""
-            document.querySelector("#num2").innerHTML = ""
-            document.querySelector("#num3").innerHTML = ""
-            document.querySelector("#num4").innerHTML = ""
+            document.querySelector("#num1").value = ""
+            document.querySelector("#num2").value = ""
+            document.querySelector("#num3").value = ""
+            document.querySelector("#num4").value = ""
         }
    })
   
