@@ -320,25 +320,53 @@
 
 </html>
 <script>
+    let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
+    let username = JSON.parse(localStorage.getItem("Username"))
+    let Location_details = JSON.parse(localStorage.getItem("Location_details")) || {}
+    let Booking_details = JSON.parse(localStorage.getItem("Booking_details")) || {}
+    let Payment_details = JSON.parse(localStorage.getItem("Payment_details")) || {}
+    let Custmor_details = JSON.parse(localStorage.getItem("Custmor_details")) || []
+if(sign_count == 1){
+    document.querySelector("#person").style.display = "none"
+    document.querySelector("#user").innerHTML = username
+}
       document.querySelector("#dashboard").addEventListener("click",function(){
     window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
    })
    document.querySelector("#payment").addEventListener("submit",function(){
     event.preventDefault()
+        let Name = document.querySelector("#name").value
+        let Card_Number = document.querySelector("#num").value
+        let Expiry_Date = document.querySelector("#Date").value
+        let Payment_details = {Name,Card_Number,Expiry_Date}
+        localStorage.setItem("Payment_details",JSON.stringify(Payment_details))
         document.querySelector("#child2").style.display = "none"
         document.querySelector("#otp").style.display = "block"
    })
    document.querySelector("#otp").addEventListener("submit",function(){
     event.preventDefault()
-        let num1 = document.querySelector("#num1").value = ""
-        let num2 = document.querySelector("#num2").value = ""
-        let num3 = document.querySelector("#num3").value = ""
-        let num4 = document.querySelector("#num4").value = ""
+        let num1 = document.querySelector("#num1").value 
+        let num2 = document.querySelector("#num2").value 
+        let num3 = document.querySelector("#num3").value 
+        let num4 = document.querySelector("#num4").value 
         let otp = num1+num2+num3+num4
+        console.log(otp)
         if(otp == "1234"){
-            
             alert("Payment Succesfull")
             document.querySelector("#otp").style.display = "none"
+            
+            let All_details = {...Location_details,...Booking_details,...Payment_details}
+
+            console.log(All_details)
+            Location_details = {}
+            Booking_details = {}
+            Payment_details = {}
+            localStorage.setItem("Location_details",JSON.stringify(Location_details))
+            localStorage.setItem("Booking_details",JSON.stringify(Booking_details))
+            localStorage.setItem("Payment_details",JSON.stringify(Payment_details))
+            Custmor_details.push(All_details)
+            localStorage.setItem("Custmor_details",JSON.stringify(Custmor_details))
+            
         }
         else{
             alert("Wrong OTP try again")

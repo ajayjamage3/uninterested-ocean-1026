@@ -39,6 +39,141 @@
             </div>
         </div>
     </div>
+    <div class="centered">
+        <div id="menu1">
+            <h5 id="cut">X</h5>
+            <p>ARE YOU A PROPERTY OWNER/MANAGER?</p>
+            <p>List New Propery</p>
+            <p class="navsign">Sign in to your dashboard</p>
+            <div class="line"></div>
+            <p>HOLIDAY HOMES FOR SALE</p>
+            <p>Homes from A grade developers. Rentals guaranteed</p>
+            <p>Marketplace</p>
+            <p> See what homes are up for sale from different</p>
+            <p>property owners.</p>
+            <div class="line"></div>
+            <div class="link">
+                <a href="">About Us</a><br>
+                <a href="http://127.0.0.1:5500/HappyHolidayHomes/Privacy.html">Privacy Policy</a><br>
+                <a href="http://127.0.0.1:5500/HappyHolidayHomes/Terms.html">Tearms of Use</a><br>
+                <a href="http://127.0.0.1:5500/HappyHolidayHomes/faq.html">FAQs</a><br>
+                <a href="http://127.0.0.1:5500/HappyHolidayHomes/contactus.html">Contact us</a><br>
+                <div class="line"></div>
+            </div>
+          
+        </div>
+        <div id="signin">
+            <a href="" id="SIGNIN">SIGN IN</a> <br> <br>
+            <a href="" id="SIGNUP">SIGN UP</a>
+        </div>
+        <div id="signout">
+            <a href="" id="SIGNOUT">SIGN OUT</a>
+        </div>
+        <div id="page_sign">
+            <div>
+                <h1>Sign in</h1>
+                <p class="navsignup">Sign Up Instead</p>
+            </div>
+            <div class="break"></div>
+            <div>
+                <div>
+                <form action="" id="formsign">
+                    
+                    <select name="" class="num" required>
+                        <option value="1">+1</option>
+                        <option value="7">+7</option>
+                        <option value="20">+20</option>
+                        <option value="27">+27</option>
+                        <option value="30">+30</option>
+                        <option value="91">+91</option>
+                        <option value="90">+90</option>
+                        <option value="71">+71</option>
+                        <option value="67">+67</option>
+                        <option value="91">+91</option>
+                        <option value="99">+99</option>
+                        <option value="76">+76</option>
+                        <option value="34">+34</option>
+                        <option value="55">+55</option>
+                    </select>
+                    
+                        <input type="text" name="" class="mobile" placeholder="Mobile Number" maxlength="10"
+                            minlength="10" required id="Mobile0">
+                    </div>
+                    <a href="" style="color:blue;  text-decoration: none;">Sign in with Email?</a>
+                    <div class="break"></div>
+                    <div class="verify">
+                       <p class="cancel">CANCEL</p>
+                        <input type="submit" value="VERIFY WITH OTP" id="OTP_ver2">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div id="page_signup">
+                <div>
+                    <h1>Sign Up</h1>
+                    <p class="navsignin">Sign In Instead</p>
+                </div>
+                <div class="break"></div>
+                <div id="forms">
+                    <div>
+                    <form action="">
+                        <select name="" class="num1" required style="margin-left:8%">
+                            <option value="1">+1</option>
+                            <option value="7">+7</option>
+                            <option value="20">+20</option>
+                            <option value="27">+27</option>
+                            <option value="30">+30</option>
+                            <option value="91">+91</option>
+                            <option value="90">+90</option>
+                            <option value="71">+71</option>
+                            <option value="67">+67</option>
+                            <option value="91">+91</option>
+                            <option value="99">+99</option>
+                            <option value="76">+76</option>
+                            <option value="34">+34</option>
+                            <option value="55">+55</option>
+                        </select>
+
+                        <input type="text" name="" class="mobile" id="mobile1" placeholder="Mobile Number" maxlength="10"
+                            minlength="10" required> <br>
+                    </div>
+                    <div id="form">
+                        <input type="email" id="mail" placeholder="Email Address" required> 
+                        <input type="password" id="pass" placeholder="Password" required>
+                        <input type="text" placeholder="First Name" id="first_name" required> <input type="text"
+                            placeholder="Last Name" id="last_name" required>
+                    </div>
+                        <div class="break"></div>
+                        <div class="verify">
+                            <p class="cancel1">CANCEL</p>
+                            <input type="submit" value="VERIFY WITH OTP" id="OTP_ver1">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="Otp">
+            <div>
+                <h1>Sign in</h1>
+            </div>
+            <div class="break"></div>
+            <div>
+                <div>
+                <form action="" id="otp">
+                        <input type="text" name="" placeholder="Your Otp" maxlength="4"
+                            minlength="4" required id="OTP">
+                    </div>
+                    <p style="margin-left:45px">Go Back</p>
+                    <div class="break"></div>
+                    <div class="verify">
+                       <p class="cancel_o">CANCEL</p>
+                        <input type="submit" value="SIGN IN" id="OTPCheck">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
     <div id="top">
     <h1 style="text-align:center">Coorg Homestays</h1>
     <p style="text-align:center">Coorg is known for the hospitality of people and beautiful scenery. This is one of the best destinations for
@@ -103,7 +238,161 @@
 
 </html>
 <script>
+let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
+let username = JSON.parse(localStorage.getItem("Username"))
+if(sign_count == 1){
+    document.querySelector("#person").style.display = "none"
+    document.querySelector("#user").innerHTML = username
+}
  document.querySelector("#dashboard").addEventListener("click",function(){
     window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
    })
+   document.querySelector(".menu").addEventListener("click",function(){
+    document.querySelector("#menu1").style.display = "block"
+})
+document.querySelector("#cut").addEventListener("click",function(){
+    document.querySelector("#menu1").style.display = "none"
+})
+document.querySelector("#person").addEventListener("click",function(){
+    if( document.querySelector("#signin").style.display == "block"){
+        document.querySelector("#signin").style.display = "none"
+    }
+    else{
+        document.querySelector("#signin").style.display = "block"
+    } 
+})
+document.querySelector("#SIGNIN").addEventListener("click",function(){
+    event.preventDefault()
+    document.querySelector("#page_sign").style.display = "block"
+    document.querySelector("#signin").style.display = "none"
+    document.querySelector("#page_signup").style.display = "none"
+})
+document.querySelector(".cancel").addEventListener("click",function(){
+    document.querySelector("#page_sign").style.display  = "none"
+    document.querySelector("#Otp").style.display  = "none"
+})
+document.querySelector(".cancel1").addEventListener("click",function(){
+    document.querySelector("#page_signup").style.display = "none"
+})
+document.querySelector("#SIGNUP").addEventListener("click",function(){
+    event.preventDefault()
+    document.querySelector("#page_signup").style.display = "block"
+    document.querySelector("#signin").style.display = "none"
+    document.querySelector("#page_sign").style.display = "none"
+})
+document.querySelector(".navsign").addEventListener("click",function(){
+    document.querySelector("#page_sign").style.display = "block"
+    document.querySelector("#menu1").style.display = "none"
+})
+document.querySelector(".navsignup").addEventListener("click",function(){
+    event.preventDefault()
+    document.querySelector("#page_signup").style.display = "block"
+    document.querySelector("#signin").style.display = "none"
+    document.querySelector("#page_sign").style.display = "none"
+})
+document.querySelector(".navsignin").addEventListener("click",function(){
+    event.preventDefault()
+    document.querySelector("#page_sign").style.display = "block"
+    document.querySelector("#page_signup").style.display = "none"
+    document.querySelector("#signin").style.display = "none"
+})
+document.querySelector(".cancel_o").addEventListener("click",function(){
+    document.querySelector("#Otp").style.display = "none"
+})
+
+// Sign Up
+PassArr = JSON.parse(localStorage.getItem("SignUp_details")) || []
+document.querySelector("#forms").addEventListener("submit",details);
+function details(){
+    event.preventDefault();
+    let Mobile_No = document.querySelector("#mobile1").value;
+    let EmailId = document.querySelector("#mail").value;
+    let Password = document.querySelector("#pass").value
+    let First_name = document.querySelector("#first_name").value
+    let Last_name = document.querySelector("#last_name").value
+    console.log(Mobile_No)
+    let val = checkSignup(Mobile_No,First_name,Last_name)
+    console.log(val)
+    if(val  == 0){
+        let Info = {Mobile_No,EmailId,Password,First_name,Last_name}
+        PassArr.push(Info)
+        localStorage.setItem("SignUp_details",JSON.stringify(PassArr))
+        document.querySelector("#page_signup").style.display = "none"
+        document.querySelector("#Otp").style.display = "block"
+        check_otp(First_name,Last_name)
+    }
+    else{
+        alert("You are already user please sign in")
+        document.querySelector("#page_signup").style.display = "none"
+        document.querySelector("#Otp").style.display = "block"
+        check_otp(First_name,Last_name)
+    }
+}
+function checkSignup(Mobile_No,First_name,Last_name){
+    let count = 0
+      PassArr.forEach((ele)=>{
+        if(Mobile_No == ele.Mobile_No){
+            count++
+        }
+      })
+      return count
+}
+document.querySelector("#formsign").addEventListener("submit",sign);
+function sign(){
+    event.preventDefault();
+        let Mobile_No = document.querySelector("#Mobile0").value;
+        console.log(Mobile_No)
+        let val1 = checkSignin(Mobile_No)
+        if(val1 == 0){
+            alert("Number not found")
+            document.querySelector("#Mobile0").value = ""   
+        }
+       
+    }
+
+function checkSignin(Mobile_No){
+    let count = 0
+    PassArr.forEach((ele)=>{
+      if(Mobile_No == ele.Mobile_No){
+        count++
+        document.querySelector("#page_sign").style.display = "none"
+        document.querySelector("#Otp").style.display = "block"
+        check_otp(ele.First_name,ele.Last_name)
+      }
+    })
+    return count
+}
+function check_otp(First_name,Last_name){
+    document.querySelector("#otp").addEventListener("submit",function(){
+        event.preventDefault()
+        let o = document.querySelector("#OTP").value;
+        if(o == "1234"){
+            sign_count = 1
+            localStorage.setItem("sign_count",JSON.stringify(sign_count))
+            document.querySelector("#Otp").style.display = "none"
+            document.querySelector("#person").style.display = "none"
+            document.querySelector("#user").innerHTML = First_name + Last_name
+            localStorage.setItem("Username",JSON.stringify(First_name + Last_name))
+        }
+        else{
+            alert("Wrong OTP")
+        }
+    })
+}
+
+document.querySelector("#user").addEventListener("click",function(){
+    event.preventDefault()
+    document.querySelector("#signout").style.display = "block"
+    document.querySelector("#SIGNOUT").addEventListener("click",function(){
+        document.querySelector("#person").style.display = "block"
+        sign_count = 0
+        localStorage.setItem("sign_count",JSON.stringify(sign_count))
+        username = ""
+    })
+})
+document.querySelector("#dashboard").addEventListener("click",function(){
+    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html"
+})
+
+
 </script>

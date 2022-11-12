@@ -284,6 +284,13 @@
 
 </html>
 <script>
+       let Booking_details = JSON.parse(localStorage.getItem("Booking_details")) || {}
+     let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
+    let username = JSON.parse(localStorage.getItem("Username"))
+if(sign_count == 1){
+    document.querySelector("#person").style.display = "none"
+    document.querySelector("#user").innerHTML = username
+}
    document.querySelector("#dashboard").addEventListener("click",function(){
     window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
    })
@@ -301,9 +308,12 @@
         let Days = Number(indate[2]) - Number(outdate[2])
         Days = Days+Year+Months
         Guests = Number(Guests)
+        let Total = Math.abs(Days*Guests*129)
         document.querySelector("#total").innerHTML = Math.abs(Days*Guests*129)
         document.querySelector("#Book_home").innerHTML = "Make a Payment"
         document.querySelector("#Book_home").addEventListener("click",function(){
+        let Booking_details = {Checkin_date,Checkout_date,Guests,username,Total}
+        localStorage.setItem("Booking_details",JSON.stringify(Booking_details))
             window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Payment.html"
         })
    })

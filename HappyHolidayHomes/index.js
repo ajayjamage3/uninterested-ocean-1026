@@ -1,4 +1,10 @@
 let bag = []
+let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
+let username = JSON.parse(localStorage.getItem("Username"))
+if(sign_count == 1){
+    document.querySelector("#person").style.display = "none"
+    document.querySelector("#user").innerHTML = username
+}
 let url = "https://636b3a947f47ef51e12abb5f.mockapi.io/Country"
 fetch(url)
 .then((res)=>res.json())
@@ -234,15 +240,26 @@ function check_otp(First_name,Last_name){
         event.preventDefault()
         let o = document.querySelector("#OTP").value;
         if(o == "1234"){
+            sign_count = 1
+            localStorage.setItem("sign_count",JSON.stringify(sign_count))
             document.querySelector("#Otp").style.display = "none"
             document.querySelector("#person").style.display = "none"
             document.querySelector("#user").innerHTML = First_name + Last_name
+            localStorage.setItem("Username",JSON.stringify(First_name + Last_name))
+           
         }
     })
 }
 
 document.querySelector("#user").addEventListener("click",function(){
+    event.preventDefault()
     document.querySelector("#signout").style.display = "block"
+    document.querySelector("#SIGNOUT").addEventListener("click",function(){
+        document.querySelector("#person").style.display = "block"
+        sign_count = 0
+        localStorage.setItem("sign_count",JSON.stringify(sign_count))
+        username = ""
+    })
 })
 document.querySelector("#dashboard").addEventListener("click",function(){
     window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html"
