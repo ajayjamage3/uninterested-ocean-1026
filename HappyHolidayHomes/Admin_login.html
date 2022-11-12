@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin login</title>
+    <style>
+        #admin_block{
+            width: 20%;
+            margin: auto;
+            margin-top: 15%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            padding: 30px;
+        }
+        #admin_block>h1{
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            background-color: blue;
+            color: white;
+        }
+
+        #Admin_login{
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #Admin_login>input{
+            display: block;
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+            margin-top:20px;
+        }
+        #login{
+            color: white;
+            background-color: blue;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="admin_block">
+        <h1>Admin</h1>
+        <form action="" id="Admin_login">
+            <input type="text" id="mail" placeholder="Username/Emailid" required> <br>
+            <input type="password" id="password" placeholder="Enter Your Password" required> <br>
+            <input type="submit"value="LOGIN" id="login">
+        </form>
+    </div>
+   
+</body>
+</html>
+<script>
+    document.querySelector("#Admin_login").addEventListener("submit",function(){
+        event.preventDefault()
+        let username = document.querySelector("#mail").value;
+        let pass = document.querySelector("#password").value;
+        if(username == "ajayjamage3@gmail.com" && pass == "Ajayjamage@123"){
+            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Admin_page.html"
+            alert("Login Succesfull")
+        }
+        else{
+            alert("Wrong Username or Password")
+            document.querySelector("#mail").value = ""
+            document.querySelector("#password").value =""
+        }
+    })
+</script>

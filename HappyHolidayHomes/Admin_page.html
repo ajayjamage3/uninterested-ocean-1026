@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+         #About {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding-left: 20px;
+        }
+
+        #About>div {
+            width: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #Admin {
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #Admin:hover {
+            border-radius: 10px;
+        }
+
+        #About>h3 {
+            color: green;
+        }
+        #container{
+            display: flex;
+            width:95%;
+            margin: auto;
+            height: 700px;
+        }
+        #menu{
+            width: 25%;
+            border: 1px solid red;
+            text-align: center;
+            background-color:rgb(31, 170, 224);
+            color: white;
+        }
+        #show{
+            width: 80%;
+            border: 1px solid blue;
+        }
+        #signupdata{
+            position: absolute;
+            left:35%;
+            margin: auto;
+            margin-top: 30px;
+            width: 90%;
+            display: none;
+        }
+        #signupdata thead{
+            color: red;
+          
+        }
+        #signupdata td{
+            width:100px;
+            border-bottom: 1px solid black;
+        }
+    
+        #signdata{
+            cursor: pointer;
+        }
+        #custmordata{
+            position: absolute;
+            left:28%;
+            margin: auto;
+            margin-top: 30px;
+            width: 90%;
+            display: none;
+        }
+        #custmordata thead{
+            color: red;
+        }
+        #custmordata td{
+            width:100px;
+            border-bottom: 1px solid black;
+        }
+        #signdata{
+            cursor: pointer;
+        }
+        #custmor{
+            cursor: pointer;
+        }
+        #logout{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius:5px;
+        }
+        #logout:hover{
+            border-radius:10px;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="About">
+            <h3 id="dash">HHH HappyHolidayHomes</h3>
+            <div>
+                <button id="logout">Logout</button>
+                <button id="Admin">Ajay Jamage</button>
+            </div>
+        </div>
+        <div id="container">
+            <div id="menu">
+                <h2 id="signdata">Sign Up Data</h2> <br>
+                <div style="border-bottom:1px solid white;"></div>
+                <h2 id="custmor">Custmor_Data</h2> <br>
+                <div style="border-bottom:1px solid white;"></div>
+            </div>
+            <div id="show">
+                <table id="signupdata">
+                    <thead>
+                        <th>
+                            <tr>
+                                <td>Email-id</td>
+                                <td>Mobile No</td>
+                                <td>Password</td>
+                                <td>First Name</td>
+                                <td>Last Name</td>
+                                <td>Username</td>
+                                <td>Delete</td>
+                            </tr>
+                           
+                        </th>
+                    </thead>
+                    <tbody id="sign_body"></tbody>
+                </table>
+                <table id="custmordata">
+                    <thead>
+                        <th>
+                            <tr>
+                                <td>ID</td>
+                                <td>Username</td>
+                                <td>No of Guests</td>
+                                <td>Country</td>
+                                <td>Room</td>
+                                <td>Total</td>
+                                <td>Checkin Date</td>
+                                <td>Checkout Date</td>
+                                <td>Delete</td>
+                            </tr>
+                        </th>
+                    </thead>
+                    <tbody id="custmor_body"></tbody>
+                </table>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    let signdata = JSON.parse(localStorage.getItem("SignUp_details"))
+    let Custmor_Data = JSON.parse(localStorage.getItem("Custmor_details"))
+
+    display(signdata)
+    function display(data){
+        data.forEach((ele,i) => {
+            let row = document.createElement("tr")
+            let td1 = document.createElement("td")
+            td1.innerText = ele.EmailId
+
+            let td2 = document.createElement("td")
+            td2.innerText = ele.Mobile_No
+
+            let td3 = document.createElement("td") 
+            td3.innerText = ele.Password
+
+            let td4 = document.createElement("td")
+            td4.innerText = ele.First_name
+
+            let td5 = document.createElement("td")
+            td5.innerText = ele.Last_name
+
+
+            let td6 = document.createElement("td")
+            td6.innerText = ele.First_name + ele.Last_name 
+            
+
+            let td7 = document.createElement("td")
+            td7.innerText = "Delete"
+            td7.style.background = "red"
+            td7.style.textAlign = "center"
+            td7.style.padding = "5px"
+            td7.addEventListener("click",function(){
+                row.innerText = ""
+                del(ele,i)
+            })
+
+            row.append(td1,td2,td3,td4,td5,td6,td7)
+            document.querySelector("#sign_body").append(row)
+        });
+    }
+    function del(ele,i){
+        signdata.splice(i,1)
+        display(signdata)
+        localStorage.setItem("SignUp_details",JSON.stringify(signdata))
+    }
+    document.querySelector("#signdata").addEventListener("click",function(){
+        document.querySelector("#custmordata").style.display = "none"
+        document.querySelector("#signupdata").style.display = "block"
+    })
+    document.querySelector("#custmor").addEventListener("click",function(){
+        document.querySelector("#custmordata").style.display = "block"
+        document.querySelector("#signupdata").style.display = "none"
+    })
+    display2(Custmor_Data)
+    function display2(data){
+        data.forEach((ele,i) => {
+            let row = document.createElement("tr")
+            let td1 = document.createElement("td")
+            td1.innerText = ele.ID
+
+            let td2 = document.createElement("td")
+            td2.innerText = ele.username
+
+            let td3 = document.createElement("td")
+            td3.innerText = ele.Guests
+
+            let td4 = document.createElement("td")
+            td4.innerText = ele.Country
+
+            let td5 = document.createElement("td")
+            td5.innerText = ele.Room
+
+            let td6 = document.createElement("td")
+            td6.innerText = ele.Total
+ 
+            let td7 = document.createElement("td")
+            td7.innerText = ele.Checkin_date
+
+            let td8 = document.createElement("td")
+            td8.innerText = ele.Checkout_date
+            
+
+            let td9 = document.createElement("td")
+            td9.innerText = "Delete"
+            td9.style.background = "red"
+            td9.style.textAlign = "center"
+            td9.style.padding = "5px"
+            td9.addEventListener("click",function(){
+                row.innerText = ""
+                delete1(ele,i)
+            })
+
+            row.append(td1,td2,td3,td4,td5,td6,td7,td8,td9)
+            document.querySelector("#custmor_body").append(row)
+        });
+    }
+    function delete1(ele,i){
+        signdata.splice(i,1)
+        display(Custmor_Data)
+        localStorage.setItem("Custmor_details",JSON.stringify(Custmor_Data))
+    }
+    document.querySelector("#logout").addEventListener("click",function(){
+        window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Admin_login.html?"
+    })
+</script>
