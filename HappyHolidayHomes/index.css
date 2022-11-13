@@ -502,3 +502,66 @@ table{
     width: 90%;
     margin: auto;
 }
+@media all and (min-width:400px) and (max-width:700px){
+    #mid{
+       display: block;
+    }
+    #mid>div:nth-child(1){
+        width: auto;
+    }
+    #mid>div:nth-child(2){
+        width: auto;
+    }
+    #mid2{
+        display: block;
+        width: auto;
+    }
+    #mid2>div{
+        width: auto;
+    }
+    #bottom{
+        grid-template-columns: repeat(3,1fr);
+    }
+    table{
+        width: auto;
+    }
+    #mid>div:nth-child(2)>span>img{
+        width: 100%;
+    }
+    #mid>div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #signin{
+       top: -20%;
+        left:80%;
+        width: 30%;
+        height: 50px;
+    }
+    #signout{
+        top: -20%;
+        left:80%;
+        width: 30%;
+        height: 50px;
+    }
+    #page_sign{
+        top: -20%;
+        left:10%;
+        width:100%;
+    }
+    #page_signup{
+        top: -20%;
+        left:10%;
+        width:100%;
+    }
+    #Otp{
+        top: -20%;
+        left:10%;
+        width:100%;
+    }
+    #menu1{
+      width: 80%;
+      left: 50%;
+      top: -25%;
+    }
+}

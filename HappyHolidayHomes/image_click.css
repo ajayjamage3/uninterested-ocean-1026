@@ -387,3 +387,38 @@ input{
     width: 90%;
     margin: auto;
 }
+@media all and (min-width:400px) and (max-width:700px){
+   
+    #signin{
+        top: 10%;
+         left:60%;
+         width: 20%;
+         height: 50px;
+     }
+     #signout{
+        top: 10%;
+        left:60%;
+        width: 20%;
+        height: 50px;
+     }
+     #page_sign{
+        top: 10%;
+        left:10%;
+         width:80%;
+     }
+     #page_signup{
+        top: 10%;
+        left:10%;
+         width:70%;
+     }
+     #Otp{
+        top: 10%;
+        left:10%;
+         width:70%;
+     }
+     #menu1{
+        width: 50%;
+        left: 50%;
+        top: 10%;
+      }
+}
