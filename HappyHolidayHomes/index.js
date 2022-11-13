@@ -1,4 +1,5 @@
 let bag = []
+PassArr = JSON.parse(localStorage.getItem("SignUp_details")) || []
 let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
 let username = JSON.parse(localStorage.getItem("Username")) || ""
 if(sign_count == 1){
@@ -174,7 +175,7 @@ document.querySelector(".cancel_o").addEventListener("click",function(){
 })
 
 // Sign Up
-PassArr = JSON.parse(localStorage.getItem("SignUp_details")) || []
+
 document.querySelector("#forms").addEventListener("submit",details);
 function details(){
     event.preventDefault();
