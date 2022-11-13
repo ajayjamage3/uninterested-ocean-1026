@@ -1,6 +1,6 @@
 let bag = []
 let sign_count = JSON.parse(localStorage.getItem("sign_count")) || 0
-let username = JSON.parse(localStorage.getItem("Username"))
+let username = JSON.parse(localStorage.getItem("Username")) || ""
 if(sign_count == 1){
     document.querySelector("#person").style.display = "none"
     document.querySelector("#user").innerHTML = username

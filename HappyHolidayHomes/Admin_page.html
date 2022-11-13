@@ -289,7 +289,7 @@
 <script>
     let signdata = JSON.parse(localStorage.getItem("SignUp_details")) || []
     let Custmor_Data = JSON.parse(localStorage.getItem("Custmor_details")) ||[]
-    let username = JSON.parse(localStorage.getItem("Username"))|| []
+    let username = JSON.parse(localStorage.getItem("Username"))|| ""
     display(signdata)
     function display(data){
         document.querySelector("#sign_body").innerHTML = ""
