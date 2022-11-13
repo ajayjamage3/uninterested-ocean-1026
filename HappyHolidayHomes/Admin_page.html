@@ -429,7 +429,7 @@
         localStorage.setItem("Custmor_details",JSON.stringify(Custmor_Data))
     }
     document.querySelector("#logout").addEventListener("click",function(){
-        window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Admin_login.html?"
+        window.location.href = "Admin_login.html"
     })
     function edit(ele,i){
         if(username == ele.First_name + ele.Last_name){
@@ -451,6 +451,7 @@
             ele.Password = Password
             display(signdata)
             localStorage.setItem("SignUp_details",JSON.stringify(signdata))
+            localStorage.setItem("Username",JSON.stringify(ele.First_name + ele.Last_name))
         })
     }
     function edit1(ele,i){

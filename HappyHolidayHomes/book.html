@@ -292,7 +292,7 @@ if(sign_count == 1){
     document.querySelector("#user").innerHTML = username
 }
    document.querySelector("#dashboard").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
+    window.location.href = "index.html"
    })
    document.querySelector("#BookNow").addEventListener("submit",function(){
     event.preventDefault()
@@ -314,7 +314,7 @@ if(sign_count == 1){
         document.querySelector("#Book_home").addEventListener("click",function(){
         let Booking_details = {Checkin_date,Checkout_date,Guests,username,Total}
         localStorage.setItem("Booking_details",JSON.stringify(Booking_details))
-            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Payment.html"
+            window.location.href = "Payment.html"
         })
    })
 </script>

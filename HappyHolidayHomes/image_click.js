@@ -52,7 +52,7 @@ function display(data){
                 let Room = ele.Room
                 let Location_details = {ID,Country,Room}
                 localStorage.setItem("Location_details",JSON.stringify(Location_details))
-                window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/book.html"
+                window.location.href = "book.html"
             }
             else{
                 document.querySelector("#page_sign").style.display = "block"
@@ -84,7 +84,7 @@ slides.addEventListener("mousedown",dragStart)
 slides.addEventListener("mousemove",drag)
 slides.addEventListener("mouseup",dragStop)
 document.querySelector("#dashboard").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
+    window.location.href = "index.html"
 })
  
 ///////////////////////////////////////////////////////
@@ -233,5 +233,5 @@ document.querySelector("#user").addEventListener("click",function(){
     })
 })
 document.querySelector("#dashboard").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html"
+    window.location.href = "index.html"
 })

@@ -25,7 +25,7 @@ function display(data){
         country.style.cursor = "pointer"
         country.style.opacity = "0.6"
         country.addEventListener("click",function(){
-            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Image_click.html?#"
+            window.location.href = "Image_click.html"
         })
         let name = document.createElement("h5")
         name.innerText = ele.name
@@ -74,7 +74,7 @@ function display2(data){
         country.style.cursor = "pointer"
         country.style.opacity = "0.6"
         country.addEventListener("click",function(){
-            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/image_click2.html"
+            window.location.href = "image_click2.html"
         })
         let name = document.createElement("h5")
         name.innerText = ele.name
@@ -119,7 +119,7 @@ function showData(data){
     });
 }
 document.querySelector(".midsec").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Image_click.html?#"
+    window.location.href = "Image_click.html"
 })
 document.querySelector(".menu").addEventListener("click",function(){
     document.querySelector("#menu1").style.display = "block"
@@ -263,5 +263,5 @@ document.querySelector("#user").addEventListener("click",function(){
     })
 })
 document.querySelector("#dashboard").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html"
+    window.location.href = "index.html"
 })

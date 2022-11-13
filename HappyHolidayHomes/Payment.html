@@ -195,7 +195,7 @@
         
         <div id="child1">
            
-            <p><a href="http://127.0.0.1:5500/HappyHolidayHomes/index.html" style="text-decoration:none;color:black">Home</a>/
+            <p><a href="index.html" style="text-decoration:none;color:black">Home</a>/
                 India /
                 Karnataka /
                 Coorg /
@@ -331,7 +331,7 @@ if(sign_count == 1){
     document.querySelector("#user").innerHTML = username
 }
       document.querySelector("#dashboard").addEventListener("click",function(){
-    window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
+    window.location.href = "index.html"
    })
    document.querySelector("#payment").addEventListener("submit",function(){
     event.preventDefault()
@@ -354,7 +354,7 @@ if(sign_count == 1){
         if(otp == "1234"){
             alert("Payment Succesfull")
             alert("Booking Succesfull")
-            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
+            window.location.href = "index.html"
             document.querySelector("#otp").style.display = "none"
             localStorage.setItem("Location_details",JSON.stringify(Location_details))
             localStorage.setItem("Booking_details",JSON.stringify(Booking_details))
