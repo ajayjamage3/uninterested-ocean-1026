@@ -55,7 +55,7 @@
         }
         #signupdata{
             position: absolute;
-            left:35%;
+            left:30%;
             margin: auto;
             margin-top: 30px;
             width: 90%;
@@ -85,7 +85,7 @@
             color: red;
         }
         #custmordata td{
-            width:100px;
+            width:95px;
             border-bottom: 1px solid black;
         }
         #signdata{
@@ -100,9 +100,91 @@
             padding: 10px;
             border: none;
             border-radius:5px;
+            cursor: pointer;
         }
         #logout:hover{
             border-radius:10px;
+        }
+        #signedit{
+            position: absolute;
+            top:30%;
+            left: 35%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: auto;
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            display:none;
+        }
+
+        #User_data{
+            width: 90%;
+            margin: auto;
+        }
+        #User_data>input{
+            padding: 10px;
+        }
+        select{
+            padding: 10px;
+            width: 20%;
+        }
+        #mail{
+            width: 90%;
+        }
+        #pass{
+            width: 90%;
+        }
+        #mobile1{
+            width: 70%;
+        }
+        #first_name,#last_name{
+            width:40%;
+        }
+        #edit{
+           background-color: green;
+           border: none;
+           color: white;
+           cursor: pointer;
+           width: 50%;
+        }
+        #custmoredit{
+            position: absolute;
+            top:30%;
+            left: 35%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: auto;
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            display:none;
+        }
+        #custmor_data{
+            width: 90%;
+            margin: auto;
+        }
+        #custmor_data>input{
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+        #edit1{
+           background-color: green;
+           border: none;
+           color: white;
+           cursor: pointer;
+           width: 50%;
+        }
+        #cancel{
+            color:black;
+            background-color: white;
+            width: 30%;
+            padding: 10px;
+        }
+        #cancel1{
+            color:black;
+            background-color: white;
+            width: 30%;
+            padding:10px;
         }
 
     </style>
@@ -134,6 +216,7 @@
                                 <td>Last Name</td>
                                 <td>Username</td>
                                 <td>Delete</td>
+                                <td>Edit</td>
                             </tr>
                            
                         </th>
@@ -153,6 +236,7 @@
                                 <td>Checkin Date</td>
                                 <td>Checkout Date</td>
                                 <td>Delete</td>
+                                <td>Edit</td>
                             </tr>
                         </th>
                     </thead>
@@ -160,14 +244,55 @@
                 </table>
             </div>
         </div>
+        <div id="signedit">
+            <form action="" id="User_data" style="display:block;margin: auto;">
+                        <select name="" class="num1" required>
+                            <option value="1">+1</option>
+                            <option value="7">+7</option>
+                            <option value="20">+20</option>
+                            <option value="27">+27</option>
+                            <option value="30">+30</option>
+                            <option value="91">+91</option>
+                            <option value="90">+90</option>
+                            <option value="71">+71</option>
+                            <option value="67">+67</option>
+                            <option value="91">+91</option>
+                            <option value="99">+99</option>
+                            <option value="76">+76</option>
+                            <option value="34">+34</option>
+                            <option value="55">+55</option>
+                        <input type="text" name="" class="mobile" id="mobile1" placeholder="Mobile Number" maxlength="10"
+                            minlength="10" required> <br> <br>
+                        <input type="email" id="mail" placeholder="Email Address" required>  <br> <br>
+                        <input type="password" id="pass" placeholder="Password" required> <br> <br>
+                        <input type="text" placeholder="First Name" id="first_name" required> <input type="text"
+                            placeholder="Last Name" id="last_name" required> <br> <br>
+                        <input type="submit" value="Edit" id="edit">
+                        <button id="cancel">Cancel</button>
+            </form>
+        </div>
+        <div id="custmoredit">
+            <form action="" id="custmor_data" style="display:block;margin: auto;">
+                    <input type="text" id="ID" placeholder="Enter ID" required> <br> <br>
+                    <input type="number" id="Guests"placeholder="Number of Guests" required> <br><br>
+                    <input type="text" id="country" placeholder="Country name" required> <br><br>
+                    <input type="text" id="room" placeholder="Room" required><br><br>
+                    <input type="number" id="total" placeholder="Total" required><br><br>
+                    <input type="date" id="checkin" placeholder="Check in date" required><br><br>
+                    <input type="date" id="checkout" placeholder="Check out date" required><br><br>
+                    <input type="submit" value="Edit" id="edit1" style="width:40%">
+                    <button id="cancel1">Cancel</button>
+            </form>
+        </div>
 </body>
 </html>
 <script>
     let signdata = JSON.parse(localStorage.getItem("SignUp_details"))
     let Custmor_Data = JSON.parse(localStorage.getItem("Custmor_details"))
-
+    let username = JSON.parse(localStorage.getItem("Username"))
     display(signdata)
     function display(data){
+        document.querySelector("#sign_body").innerHTML = ""
         data.forEach((ele,i) => {
             let row = document.createElement("tr")
             let td1 = document.createElement("td")
@@ -189,9 +314,9 @@
             let td6 = document.createElement("td")
             td6.innerText = ele.First_name + ele.Last_name 
             
-
             let td7 = document.createElement("td")
             td7.innerText = "Delete"
+            td7.style.cursor = "pointer"
             td7.style.background = "red"
             td7.style.textAlign = "center"
             td7.style.padding = "5px"
@@ -200,11 +325,26 @@
                 del(ele,i)
             })
 
-            row.append(td1,td2,td3,td4,td5,td6,td7)
+            let td8 = document.createElement("td")
+            td8.innerText = "Edit"
+            td8.style.cursor = "pointer"
+            td8.style.background = "green"
+            td8.style.textAlign = "center"
+            td8.style.padding = "5px"
+            td8.addEventListener("click",function(){
+                document.querySelector("#signupdata").style.display = "none"
+                edit(ele,i)
+            })
+
+            row.append(td1,td2,td3,td4,td5,td6,td7,td8)
             document.querySelector("#sign_body").append(row)
         });
     }
     function del(ele,i){
+        if(username == ele.First_name + ele.Last_name){
+            sign_count = 0
+            localStorage.setItem("sign_count",JSON.stringify(sign_count))
+        }
         signdata.splice(i,1)
         display(signdata)
         localStorage.setItem("SignUp_details",JSON.stringify(signdata))
@@ -212,13 +352,25 @@
     document.querySelector("#signdata").addEventListener("click",function(){
         document.querySelector("#custmordata").style.display = "none"
         document.querySelector("#signupdata").style.display = "block"
+        document.querySelector("#signedit").style.display = "none"
+        document.querySelector("#custmoredit").style.display = "none"
     })
     document.querySelector("#custmor").addEventListener("click",function(){
         document.querySelector("#custmordata").style.display = "block"
         document.querySelector("#signupdata").style.display = "none"
+        document.querySelector("#custmoredit").style.display = "none"
+        document.querySelector("#signedit").style.display = "none"
     })
+    document.querySelector("#cancel").addEventListener("click",function(){
+        document.querySelector("#signedit").style.display = "none"
+    })
+    document.querySelector("#cancel1").addEventListener("click",function(){
+        document.querySelector("#custmoredit").style.display = "none"
+    })
+   
     display2(Custmor_Data)
     function display2(data){
+        document.querySelector("#custmor_body").innerHTML = ""
         data.forEach((ele,i) => {
             let row = document.createElement("tr")
             let td1 = document.createElement("td")
@@ -251,21 +403,81 @@
             td9.style.background = "red"
             td9.style.textAlign = "center"
             td9.style.padding = "5px"
+            td9.style.cursor = "pointer"
             td9.addEventListener("click",function(){
                 row.innerText = ""
                 delete1(ele,i)
             })
+            let td10 = document.createElement("td")
+            td10.innerText = "Edit"
+            td10.style.cursor = "pointer"
+            td10.style.background = "green"
+            td10.style.textAlign = "center"
+            td10.style.padding = "5px"
+            td10.addEventListener("click",function(){
+                document.querySelector("#custmordata").style.display = "none"
+                edit1(ele,i)
+            })
 
-            row.append(td1,td2,td3,td4,td5,td6,td7,td8,td9)
+            row.append(td1,td2,td3,td4,td5,td6,td7,td8,td9,td10)
             document.querySelector("#custmor_body").append(row)
         });
     }
     function delete1(ele,i){
-        signdata.splice(i,1)
-        display(Custmor_Data)
+        Custmor_Data.splice(i,1)
+        display2(Custmor_Data)
         localStorage.setItem("Custmor_details",JSON.stringify(Custmor_Data))
     }
     document.querySelector("#logout").addEventListener("click",function(){
         window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/Admin_login.html?"
     })
+    function edit(ele,i){
+        if(username == ele.First_name + ele.Last_name){
+            sign_count = 0
+            localStorage.setItem("sign_count",JSON.stringify(sign_count))
+        }
+        document.querySelector("#custmoredit").style.display = "none"
+        document.querySelector("#signedit").style.display = "block"
+        document.querySelector("#User_data").addEventListener("submit",function(){
+            let Mobile = document.querySelector("#mobile1").value;
+            let Email =  document.querySelector("#mail").value;
+            let Password =  document.querySelector("#pass").value;
+            let First_name =  document.querySelector("#first_name").value;
+            let Last_name =  document.querySelector("#last_name").value;
+            ele.EmailId = Email
+            ele.Mobile_No = Mobile
+            ele.Last_name = Last_name
+            ele.First_name = First_name
+            ele.Password = Password
+            display(signdata)
+            localStorage.setItem("SignUp_details",JSON.stringify(signdata))
+        })
+    }
+    function edit1(ele,i){
+        if(username == ele.First_name + ele.Last_name){
+            sign_count = 0
+            localStorage.setItem("sign_count",JSON.stringify(sign_count))
+        }
+        document.querySelector("#signedit").style.display = "none"
+        document.querySelector("#custmoredit").style.display = "block"
+        document.querySelector("#custmor_data").addEventListener("submit",function(){
+            let ID = document.querySelector("#ID").value;
+            let Guest = document.querySelector("#Guests").value;
+            let Country = document.querySelector("#country").value;
+            let Room = document.querySelector("#room").value;
+            let Total = document.querySelector("#total").value;
+            let Checkin_date = document.querySelector("#checkin").value;
+            let Checkout_date = document.querySelector("#checkout").value;
+            ele.Checkin_date = Checkin_date
+            ele.Checkout_date = Checkout_date
+            ele.Room = Room
+            ele.ID = ID
+            ele.Total = Total
+            ele.Guests = Guest
+            ele.Country = Country
+            display2(Custmor_Data)
+            localStorage.setItem("Custmor_details",JSON.stringify(Custmor_Data))
+            document.querySelector("#custmordata").style.display = "block"
+        })
+    }
 </script>

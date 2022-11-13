@@ -353,17 +353,13 @@ if(sign_count == 1){
         console.log(otp)
         if(otp == "1234"){
             alert("Payment Succesfull")
+            alert("Booking Succesfull")
+            window.location.href = "http://127.0.0.1:5500/HappyHolidayHomes/index.html#"
             document.querySelector("#otp").style.display = "none"
-            
-            let All_details = {...Location_details,...Booking_details,...Payment_details}
-
-            console.log(All_details)
-            Location_details = {}
-            Booking_details = {}
-            Payment_details = {}
             localStorage.setItem("Location_details",JSON.stringify(Location_details))
             localStorage.setItem("Booking_details",JSON.stringify(Booking_details))
             localStorage.setItem("Payment_details",JSON.stringify(Payment_details))
+            let All_details = {...Location_details,...Booking_details,...Payment_details}
             Custmor_details.push(All_details)
             localStorage.setItem("Custmor_details",JSON.stringify(Custmor_details))
             
@@ -376,5 +372,6 @@ if(sign_count == 1){
             document.querySelector("#num4").value = ""
         }
    })
+          
   
 </script>
